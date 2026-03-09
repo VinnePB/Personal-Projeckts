@@ -6,3 +6,39 @@ Cadastrar aluno
 Cadastra disciplinas
 Listar alunos 
 Listar alunos por disciplina'
+
+
+📊 Onde os dados estão sendo armazenados atualmente
+
+No sistema que eu te passei, os dados ficam apenas na memória do programa usando estruturas do Python:
+
+alunos = []
+disciplinas = {}
+Estrutura usada
+
+Disciplinas (dicionário):
+
+disciplinas = {
+    "Matemática": ["João", "Maria"],
+    "História": ["Pedro"]
+}
+
+Alunos (lista):
+
+alunos = [
+    {"nome": "João", "disciplina": "Matemática"},
+    {"nome": "Maria", "disciplina": "Matemática"},
+    {"nome": "Pedro", "disciplina": "História"}
+]
+
+Ou seja:
+
+disciplinas → guarda disciplinas e alunos dentro delas
+
+alunos → guarda cada aluno com sua disciplina
+
+⚠️ Importante
+
+Esses dados não são salvos em arquivo.
+
+Eles existem somente enquanto o programa está rodando.
