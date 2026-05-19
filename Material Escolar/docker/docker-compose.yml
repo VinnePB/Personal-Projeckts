@@ -1,0 +1,30 @@
+
+services:
+  cliente_ubuntu:
+    container_name: cliente_ubuntu
+    image: ubuntu:latest
+    command: sleep infinity
+    networks:
+      - rede_aula
+  server_python:
+      container_name: server_python
+      build: ./server
+      ports:
+        - "3000:3000"
+      depends_on:
+        - db
+      networks:
+          - rede_aula
+  db: 
+    container_name: db
+    image: postgres:latest
+    environment:
+      postgres_user:  "usuario"
+      postgres_password:  "senha"
+      postgres_db: "banquinho"
+    networks:
+      - rede_aula
+
+networks:
+  rede_aula:
+    driver: bridge
